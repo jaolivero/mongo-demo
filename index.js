@@ -3,10 +3,10 @@ const mongoose = require("mongoose");
 mongoose
   .connect("mongodb://localhost/playground")
   .then(() => console.log("connected to MongoDb.."))
-  .catch((err) => console.error("COuld not connect to mongodb...", err));
+  .catch((err) => console.error("Could not connect to mongodb...", err));
 
 const courseSchema = new mongoose.Schema({
-  name: { type: String, required: tgirue },
+  name: { type: String, required: true },
   author: String,
   tags: [String],
   date: { type: Date, default: Date.now },
